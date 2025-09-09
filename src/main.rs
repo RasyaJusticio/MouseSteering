@@ -63,8 +63,8 @@ fn main() {
             emulator.gamepad.thumb_lx = Processor::to_thumb_val(0.0);
 
             visualizer.hor_lock = true;
-            visualizer.lval = 0.0;
-            visualizer.rval = 0.0;
+            // visualizer.lval = 0.0;
+            // visualizer.rval = 0.0;
         }
 
         if throttle_config.enabled && !throttle_key.value {
@@ -86,12 +86,12 @@ fn main() {
             visualizer.tval = right_trigger;
             visualizer.bval = left_trigger;
         } else {
-            emulator.gamepad.left_trigger = Processor::to_trigger_val(0.0);
-            emulator.gamepad.right_trigger = Processor::to_trigger_val(0.0);
+            // emulator.gamepad.left_trigger = Processor::to_trigger_val(0.0);
+            // emulator.gamepad.right_trigger = Processor::to_trigger_val(0.0);
             
             visualizer.ver_lock = true;
-            visualizer.tval = 0.0;
-            visualizer.bval = 0.0;
+            // visualizer.tval = 0.0;
+            // visualizer.bval = 0.0;
         }
 
         emulator.emulate();
